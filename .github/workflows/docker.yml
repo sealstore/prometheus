@@ -1,17 +1,21 @@
-name: CI
+name: Docker Image CI
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Build the Docker image
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        git clone https://github.com/sealstore/sealbuild.git build
+        cd build
+        export GO111MODULE=on && export GOPROXY=https://goproxy.io && export GOOS=linux && export GOARCH=amd64 && go build -o ../sealbuild -v && chmod a+x ../sealbuild
+        cd ../ && ./sealbuild -f config.ini
+        ls -l
+
+    - uses: actions/upload-artifact@master
+      with:
+        name: tekton
+        path: /tmp/prometheus/

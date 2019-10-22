@@ -1,0 +1,13 @@
+[
+  "quay.io/coreos/kube-state-metrics:v1.7.1",
+  "quay.io/prometheus/alertmanager:v0.18.0",
+  "quay.io/coreos/prometheus-operator:v0.31.1",
+  "grafana/grafana:6.2.2",
+  "quay.io/prometheus/node-exporter:v0.18.1",
+  "quay.io/coreos/kube-rbac-proxy:v0.4.1",
+  "quay.io/coreos/k8s-prometheus-adapter-amd64:v0.4.1",
+  "k8s.gcr.io/addon-resizer:1.8.4",
+  "quay.io/coreos/prometheus-config-reloader:v0.31.1",
+  "quay.io/coreos/configmap-reload:v0.0.1",
+  "quay.io/prometheus/prometheus:v2.11.0"
+]
