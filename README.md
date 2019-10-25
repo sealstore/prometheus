@@ -1,2 +1,2 @@
 # prometheus
-sealos install prometheus:v0.32.0
+sealos install --pkg-url prometheus.tar
