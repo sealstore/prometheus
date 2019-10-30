@@ -10,3 +10,6 @@ sealos install --pkg-url prometheus.tar
 ```
 sealos install --pkg-url https://github.com/sealstore/prometheus/releases/download/v0.31.1/prometheus.tar
 ```
+
+# 访问方式
+grafana http://集群节点IP:30000 初始账户密码 admin/admin
