@@ -13,3 +13,9 @@ sealos install --pkg-url https://github.com/sealstore/prometheus/releases/downlo
 
 # 访问方式
 grafana http://集群节点IP:30000 初始账户密码 admin/admin
+
+# 为什么要用此包
+1. tar包中包含yaml文件，镜像文件，离线无忧
+2. 即便你没有镜像仓库，sealos也会帮你把镜像导入到集群节点上
+3. 一键安装省心
+4. 实现上使用高大上的prometheus operator,各组件实现高可用
